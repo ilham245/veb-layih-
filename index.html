@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGalaxy - Premium Avtomobillər</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">AutoGalaxy</div>
+        <nav>
+            <ul>
+                <li><a href="#about">Məlumat</a></li>
+                <li><a href="#cars">Avtomobillər</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Xəyallarınızdakı Avtomobili Kəşf Edin</h1>
+            <p>Premium və keyfiyyətli avtomobillərin tək ünvanı.</p>
+            <a href="#cars" class="btn-primary">Avtoparka Bax</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Geniş Məlumat</h2>
+            <div class="about-content">
+                <p>Xoş gəlmisiniz! Səhifəmiz avtomobil dünyasına dair ən son yenilikləri, ehtiyacınıza uyğun ən yaxşı avtomobil seçimlərini və rahatlıqla gəzə biləcəyiniz bir avtopark təqdim edir. Saytda nümayiş olunan hər bir avtomobilin şəkilləri və detalları xüsusi olaraq hazırlanmışdır.</p>
+                <p>Məqsədimiz hər kəsin zövqünə və büdcəsinə uyğun, etibarlı maşın tapmasını təmin etməkdir. Saytda təqdim olunan modellərin hər biri fərdi tənzimlənmiş səhifələrə malikdir. Hər hansı bir maşının üzərinə klikləməklə onun tam xüsusiyyətlərilə ("Buraxılış ili", "Rəng", "Bazar", "Yürüş" və s.) tanış ola bilər və eyni səhifədən həmin avtomobil üzrə şərh yaza bilərsiniz.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cars" class="cars-section">
+        <div class="container">
+            <div class="avtopark-header">
+                <h2>Avtopark</h2>
+            </div>
+            <div class="cars-grid" id="carsGrid">
+                <!-- Avtomobillər data.js vasitəsilə script.js-də bura əlavə olunacaq -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AutoGalaxy. Bütün hüquqlar qorunur.</p>
+    </footer>
+
+    <!-- Əvvəcə data yüklənir, sonra məntiq -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

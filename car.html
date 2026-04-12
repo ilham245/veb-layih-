@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avtomobil Detalları - AutoGalaxy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar" style="position: relative; margin-bottom: 20px;">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">AutoGalaxy</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html#cars">Geri Qayıt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" style="padding-top: 40px; padding-bottom: 40px; min-height: 80vh;">
+        <div class="car-page-wrapper">
+            <div class="car-main-view">
+                <img id="carMainImage" src="" alt="Car Image" class="car-page-image">
+                <div class="car-gallery" id="carGallery">
+                    <!-- Qabaq, Yan, İç şəkillər bura əlavə olunacaq -->
+                </div>
+            </div>
+            <div class="car-sidebar">
+                <h2 id="carTitle" class="car-page-title">Yüklənir...</h2>
+                <h3 id="carPrice" class="car-page-price"></h3>
+
+                <div class="specs-table">
+                    <div class="spec-row">
+                        <span class="spec-label">Marka</span>
+                        <span class="spec-value" id="specMarka">-</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Model</span>
+                        <span class="spec-value" id="specModel">-</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Buraxılış ili</span>
+                        <span class="spec-value" id="specYear">-</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Yeni</span>
+                        <span class="spec-value" id="specYeni">-</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Yürüş</span>
+                        <span class="spec-value" id="specMileage">-</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Hansı bazar üçün</span>
+                        <span class="spec-value" id="specMarket">-</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Şəhər</span>
+                        <span class="spec-value" id="specCity">-</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Rəng</span>
+                        <span class="spec-value" id="specColor">-</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Mühərrik</span>
+                        <span class="spec-value" id="specEngine">-</span>
+                    </div>
+                    <div class="spec-row"
+                        style="margin-top: 10px; padding-top: 15px; border-top: 2px solid var(--primary);">
+                        <span class="spec-label" style="color:var(--primary); font-weight:bold;">Əlaqə</span>
+                        <span class="spec-value" id="specPhone" style="color:var(--primary); font-size:1.2rem;">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Şərhlər Bölməsi -->
+    <section class="comments-section"
+        style="background: var(--dark); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 60px;">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Bu maşın üçün Şərh Yazın</h2>
+            <p class="comment-subtitle">Fikirlərinizi bizimlə bölüşün.</p>
+
+            <div id="authBox" class="comment-box" style="margin-bottom: 50px;">
+                <h3 style="margin-bottom: 15px;">Şərh yazmaq üçün hesabınıza daxil olun</h3>
+                <form id="authForm">
+                    <div class="input-group">
+                        <input type="email" id="authEmail" placeholder="Email ünvanınız" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="authPassword" placeholder="Parol" required>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <button type="button" id="loginBtn" class="btn-primary">Daxil Ol</button>
+                        <button type="button" id="registerBtn" class="btn-primary" style="background-color: transparent; border: 1px solid var(--primary); color: var(--primary);">Qeydiyyatdan Keç</button>
+                    </div>
+                    <p id="authMessage" style="color: #ff4d4d; margin-top: 10px; font-size: 0.9rem;"></p>
+                </form>
+            </div>
+
+            <div id="commentWriteBox" class="comment-box" style="margin-bottom: 50px; display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <h3>Şərhinizi yazın</h3>
+                    <button type="button" id="logoutBtn" style="background: none; border: none; color: var(--primary); cursor: pointer; font-size: 0.9rem; text-decoration: underline;">Hesabdan Çıx</button>
+                </div>
+                <form id="commentForm">
+                    <div class="input-group">
+                        <input type="text" id="userName" placeholder="Ad və Soyadınız" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="userComment" rows="4" placeholder="Şərhinizi bura yazın..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Şərh Göndər</button>
+                </form>
+            </div>
+
+            <div class="comments-list" id="commentsList" style="max-width: 800px; margin: 0 auto;">
+                <h3>Şərhlər</h3>
+                <!-- Şərhlər car.js tərəfindən bura əlavə olunacaq -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AutoGalaxy. Bütün hüquqlar qorunur.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="car.js"></script>
+</body>
+
+</html>
